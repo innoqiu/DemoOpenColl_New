@@ -8,7 +8,7 @@
     "cloudDocument": "https://github.com/innoqiu/DemoOpenColl_New.git",
     "output": "Literature review subsection titled Using AI to Proxy Communication.",
     "audience": "Readers of a broader paper on AI-mediated collaboration",
-    "collaborationMode": "OpenCollab parent repo stays local; this task repo stores the brief and JSON coordination dataset."
+    "collaborationMode": "OpenCollab parent repo stays local; the task folder stores the task brief and JSON dataset."
   },
   "brief": {
     "assignment": "Write a concise literature review subsection explaining how AI systems stand in for, filter, summarize, translate, rephrase, or coordinate communication between people, while distinguishing proxy communication from ordinary individual writing assistance.",
@@ -27,10 +27,26 @@
     ]
   },
   "members": [
-    { "id": "mira", "displayName": "Mira", "focus": "scope, definitions, and taxonomy" },
-    { "id": "noah", "displayName": "Noah", "focus": "source search and evidence matrix" },
-    { "id": "lin", "displayName": "Lin", "focus": "synthesis and draft background" },
-    { "id": "priya", "displayName": "Priya", "focus": "section outline, integration, and final merge" }
+    {
+      "id": "mira",
+      "displayName": "Mira",
+      "focus": "scope, definitions, and taxonomy"
+    },
+    {
+      "id": "noah",
+      "displayName": "Noah",
+      "focus": "source search and evidence matrix"
+    },
+    {
+      "id": "lin",
+      "displayName": "Lin",
+      "focus": "synthesis and draft background"
+    },
+    {
+      "id": "priya",
+      "displayName": "Priya",
+      "focus": "section outline, integration, and final merge"
+    }
   ],
   "workPackages": [
     {
@@ -41,13 +57,41 @@
       "progress": 70,
       "brief": "Working definition, boundary with individual writing assistance, scope tests, and handoff notes drafted for team review."
     },
-    { "id": "OCB-02", "title": "Proxy Mechanism Taxonomy", "owner": "mira" },
-    { "id": "OCB-03", "title": "Source Search Matrix", "owner": "noah" },
-    { "id": "OCB-04", "title": "Evidence Traceability Notes", "owner": "noah" },
-    { "id": "OCB-05", "title": "Background Synthesis Draft", "owner": "lin" },
-    { "id": "OCB-06", "title": "Breakdowns And Risks Draft", "owner": "lin" },
-    { "id": "OCB-07", "title": "Section Outline And Writing Boundaries", "owner": "priya" },
-    { "id": "OCB-08", "title": "Integration Pass And Final Merge", "owner": "priya" }
+    {
+      "id": "OCB-02",
+      "title": "Proxy Mechanism Taxonomy",
+      "owner": "mira"
+    },
+    {
+      "id": "OCB-03",
+      "title": "Source Search Matrix",
+      "owner": "noah"
+    },
+    {
+      "id": "OCB-04",
+      "title": "Evidence Traceability Notes",
+      "owner": "noah"
+    },
+    {
+      "id": "OCB-05",
+      "title": "Background Synthesis Draft",
+      "owner": "lin"
+    },
+    {
+      "id": "OCB-06",
+      "title": "Breakdowns And Risks Draft",
+      "owner": "lin"
+    },
+    {
+      "id": "OCB-07",
+      "title": "Section Outline And Writing Boundaries",
+      "owner": "priya"
+    },
+    {
+      "id": "OCB-08",
+      "title": "Integration Pass And Final Merge",
+      "owner": "priya"
+    }
   ],
   "classificationHints": [
     "Use dependency edges when one artifact must exist before another can be accurate.",

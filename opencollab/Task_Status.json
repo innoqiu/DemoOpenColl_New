@@ -4,14 +4,14 @@
     "name": "DemoOpenColl_New",
     "repo": "innoqiu/DemoOpenColl_New",
     "branch": "main",
-    "locked": false,
+    "locked": true,
     "statusFile": "opencollab/Task_Status.json",
-    "currentActorId": "mira",
-    "updatedAt": "2026-07-01T03:20:01.608Z"
+    "currentActorId": "noah",
+    "updatedAt": "2026-07-01T04:08:02.722Z"
   },
   "commands": {
     "def": "/ocb def --actor <id> --signature <text> --color <hex>",
-    "init": "/ocb init https://github.com/innoqiu/DemoOpenColl_New.git",
+    "init": "/ocb init https://github.com/innoqiu/DemoOpenColl_New",
     "run": "/ocb run",
     "list": "/ocb list",
     "use": "/ocb use <project-id>",
@@ -29,7 +29,7 @@
       "CLAUDE.md",
       ".claude/commands/ocb.md"
     ],
-    "initSummary": "This task folder is managed by a parent OpenCollab repo. The task brief has been decomposed into task interfaces for writing a literature review subsection."
+    "initSummary": "This task folder is managed by a parent OpenCollab repo. The agent should read the project brief, decompose minimal task interfaces, then maintain this JSON dataset."
   },
   "taskBrief": {
     "path": "TASK_BRIEF.md",
@@ -69,8 +69,8 @@
     {
       "id": "noah",
       "displayName": "Noah",
-      "signature": "NH",
-      "color": "#8a6f23",
+      "signature": "NO",
+      "color": "#45f27f",
       "role": "human",
       "active": true
     },
@@ -228,8 +228,8 @@
       "id": "OCB-03",
       "title": "Source Search Matrix",
       "category": "evidence",
-      "state": "claimed",
-      "progress": 0,
+      "state": "done",
+      "progress": 100,
       "claimantId": "noah",
       "grid": {
         "x": 7,
@@ -256,15 +256,15 @@
           "Matrix tags should stay synchronized with the taxonomy task."
         ]
       },
-      "updatedAt": "2026-07-01T03:08:56.730Z"
+      "updatedAt": "2026-07-01T04:07:46.537Z"
     },
     {
       "id": "OCB-04",
       "title": "Evidence Traceability Notes",
       "category": "evidence",
-      "state": "claimed",
+      "state": "undo",
       "progress": 0,
-      "claimantId": "noah",
+      "claimantId": null,
       "grid": {
         "x": 11,
         "y": 1,
@@ -291,7 +291,7 @@
           "Unresolved evidence gaps should be visible before final integration."
         ]
       },
-      "updatedAt": "2026-07-01T03:08:56.730Z"
+      "updatedAt": "2026-07-01T04:07:49.611Z"
     },
     {
       "id": "OCB-05",
@@ -600,6 +600,23 @@
     }
   ],
   "timeline": [
+    {
+      "id": "tl-1782878882721-a066",
+      "type": "update",
+      "actorId": "noah",
+      "taskIds": [
+        "OCB-01",
+        "OCB-03"
+      ],
+      "title": "Agent push review",
+      "details": "Reviewed 2 active task interfaces before push. Highlighted OCB-01, OCB-03. No unresolved conflicts are recorded.",
+      "createdAt": "2026-07-01T04:08:02.721Z",
+      "adds": [
+        "tasks[] review",
+        "conflicts[] review",
+        "timeline[]"
+      ]
+    },
     {
       "id": "tl-20260701-mira-ocb01-scope-definition",
       "type": "update",
