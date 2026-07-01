@@ -1,0 +1,630 @@
+{
+  "schemaVersion": "0.6.0",
+  "workspace": {
+    "name": "DemoOpenColl_New",
+    "repo": "innoqiu/DemoOpenColl_New",
+    "branch": "main",
+    "locked": false,
+    "statusFile": "opencollab/Task_Status.json",
+    "currentActorId": "mira",
+    "updatedAt": "2026-07-01T03:20:01.608Z"
+  },
+  "commands": {
+    "def": "/ocb def --actor <id> --signature <text> --color <hex>",
+    "init": "/ocb init https://github.com/innoqiu/DemoOpenColl_New.git",
+    "run": "/ocb run",
+    "list": "/ocb list",
+    "use": "/ocb use <project-id>",
+    "pull": "/ocb pull",
+    "push": "/ocb push",
+    "mtg": "/ocb mtg --title <meeting> --task <taskId> --notes <text>"
+  },
+  "protocol": {
+    "cloudDocument": "https://github.com/innoqiu/DemoOpenColl_New.git",
+    "commandProtocol": "parent:opencollab/PROTOCOL_COMMANDS.md",
+    "interdependenceFramework": "parent:opencollab/INTERDEPENDENCE_CONFLICT_FRAMEWORK.md",
+    "promptLibrary": "parent:opencollab/PROMPTS.md",
+    "agentEntryFiles": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      ".claude/commands/ocb.md"
+    ],
+    "initSummary": "This task folder is managed by a parent OpenCollab repo. The task brief has been decomposed into task interfaces for writing a literature review subsection."
+  },
+  "taskBrief": {
+    "path": "TASK_BRIEF.md",
+    "cloudDocument": "https://github.com/innoqiu/DemoOpenColl_New.git",
+    "firstReadOrder": [
+      "parent:AGENTS.md",
+      "parent:CLAUDE.md",
+      "parent:opencollab/PROTOCOL_COMMANDS.md",
+      "TASK_BRIEF.md",
+      "opencollab/TTask_Status.json",
+      "opencollab/Task_Status.json",
+      "opencollab/Task_Status.schema.json",
+      "parent:opencollab/INTERDEPENDENCE_CONFLICT_FRAMEWORK.md",
+      "parent:opencollab/PROMPTS.md",
+      "parent:opencollab/AGENT.md",
+      "parent:README.md"
+    ],
+    "lastReviewedAt": "2026-07-01T03:08:56.730Z"
+  },
+  "members": [
+    {
+      "id": "agent",
+      "displayName": "Local Agent",
+      "signature": "AI",
+      "color": "#9aa0ad",
+      "role": "agent",
+      "active": true
+    },
+    {
+      "id": "mira",
+      "displayName": "Mira",
+      "signature": "MR",
+      "color": "#2f6f6c",
+      "role": "human",
+      "active": true
+    },
+    {
+      "id": "noah",
+      "displayName": "Noah",
+      "signature": "NH",
+      "color": "#8a6f23",
+      "role": "human",
+      "active": true
+    },
+    {
+      "id": "lin",
+      "displayName": "Lin",
+      "signature": "LN",
+      "color": "#b4515d",
+      "role": "human",
+      "active": true
+    },
+    {
+      "id": "priya",
+      "displayName": "Priya",
+      "signature": "PY",
+      "color": "#5d6f9e",
+      "role": "human",
+      "active": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "framing",
+      "label": "Framing",
+      "color": "#2f6f6c"
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence",
+      "color": "#8a6f23"
+    },
+    {
+      "id": "drafting",
+      "label": "Drafting",
+      "color": "#b4515d"
+    },
+    {
+      "id": "integration",
+      "label": "Integration",
+      "color": "#5d6f9e"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "OCB-01",
+      "title": "Scope Definition",
+      "category": "framing",
+      "state": "active",
+      "progress": 70,
+      "claimantId": "mira",
+      "grid": {
+        "x": 1,
+        "y": 1,
+        "w": 3,
+        "h": 2
+      },
+      "summary": "Define AI proxy communication and make the boundary with ordinary individual writing assistance explicit.",
+      "draftBrief": {
+        "title": "Scope Definition Brief: AI Proxy Communication",
+        "ownerId": "mira",
+        "status": "approved-for-push",
+        "proposedProgress": 70,
+        "updatedAt": "2026-07-01T03:20:01.608Z",
+        "workingDefinition": "AI proxy communication occurs when an AI system mediates communication between people by operating on behalf of one or more participants in the communicative exchange. It does more than help one person produce wording: it stands in for, filters, summarizes, translates, rephrases, routes, sequences, or coordinates messages so that another person receives AI-shaped communication as part of interpersonal or group interaction.",
+        "scopeRule": "Use AI proxy communication when AI is positioned between human communicators and changes how one person's meaning, presence, evidence, request, response, or coordination signal reaches another person or group.",
+        "boundaryWithWritingAssistance": "Ordinary individual writing assistance stays outside this definition when AI is used privately by one person to brainstorm, draft, polish, or edit their own text, while that person remains the sole communicator responsible for what reaches the audience. The case becomes proxy communication only when the AI-shaped output mediates a relationship between people, represents someone to someone else, or becomes a coordination surface that others rely on.",
+        "inScope": [
+          "An AI summary of a meeting or thread sent to absent teammates because the system represents prior communication to people who were not present.",
+          "An AI agent that filters, prioritizes, routes, or answers messages on behalf of a participant because it changes how others can reach or understand that participant.",
+          "AI translation, rephrasing, or tone adjustment used in an interpersonal exchange when it materially reshapes how one person is represented to another.",
+          "AI coordination support that turns distributed messages into tasks, decisions, handoffs, or next actions for a group."
+        ],
+        "outOfScope": [
+          "Private brainstorming, outlining, grammar checking, or style polishing where AI helps one writer prepare text but does not mediate interaction between people.",
+          "A private literature summary used only for one researcher's comprehension before any claim is shared with collaborators.",
+          "Generic content generation with no interpersonal handoff, representation, routing, translation, or coordination function.",
+          "Minor copyediting that leaves the sender's intended message and communicative role unchanged."
+        ],
+        "edgeCases": [
+          "AI rewriting an angry email into a diplomatic message is in scope if the rewrite changes how the sender is represented in the interpersonal exchange.",
+          "AI grammar checking an email is usually out of scope unless the system substantively alters tone, intent, or relational meaning.",
+          "AI summarizing a shared document for a team is in scope when the summary becomes what teammates use to coordinate, but out of scope if it remains private study aid."
+        ],
+        "operationalTest": [
+          "Who is being represented, filtered, summarized, translated, or coordinated by the AI?",
+          "Who receives or relies on the AI-shaped communication?",
+          "What communicative function does the AI perform between people?",
+          "Would the case still matter if no other person or group were on the receiving side?"
+        ],
+        "draftSentence": "For this review, AI proxy communication refers to AI-mediated arrangements in which a system stands between human communicators by representing, transforming, relaying, filtering, or coordinating communicative acts for one person or group in relation to another. The concept is narrower than individual AI writing assistance: proxy communication requires an interpersonal or collaborative handoff in which AI-shaped output becomes part of how people understand, respond to, or coordinate with one another.",
+        "handoffNotes": [
+          "Noah should tag sources as proxy communication only when they involve interpersonal mediation, representation, filtering, translation, summarization, or coordination.",
+          "Lin and Priya should preserve the distinction between proxy communication and private writing assistance unless the team explicitly revises this definition.",
+          "Evidence claims still need source-matrix support before final drafting."
+        ]
+      },
+      "touches": [
+        "TASK_BRIEF.md",
+        "notes/definition_taxonomy.md",
+        "draft/using-ai-to-proxy-communication.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "TASK_BRIEF.md constraints and deliverable",
+          "Examples from early source scan when available"
+        ],
+        "outputs": [
+          "Stable working definition of AI proxy communication",
+          "Boundary note distinguishing proxy communication from individual writing assistance",
+          "Scope definition brief with in-scope examples, out-of-scope examples, edge cases, operational test, and handoff notes"
+        ],
+        "boundaryNotes": [
+          "Downstream writing should not use a competing definition without updating this task.",
+          "Definition language must remain traceable in both notes and final draft."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:20:01.608Z"
+    },
+    {
+      "id": "OCB-02",
+      "title": "Proxy Mechanism Taxonomy",
+      "category": "framing",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "mira",
+      "grid": {
+        "x": 4,
+        "y": 1,
+        "w": 3,
+        "h": 2
+      },
+      "summary": "Create the small taxonomy of stand-in, filtering, summarizing, translating, rephrasing, and coordination mechanisms.",
+      "touches": [
+        "notes/definition_taxonomy.md",
+        "literature/source_matrix.md",
+        "draft/using-ai-to-proxy-communication.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-01 working definition",
+          "Mechanism examples discovered in the source matrix"
+        ],
+        "outputs": [
+          "Taxonomy labels and short descriptions",
+          "Tagging vocabulary for the literature matrix and draft"
+        ],
+        "boundaryNotes": [
+          "Taxonomy labels should be reused by source search and synthesis.",
+          "If source evidence suggests a new category, coordinate with OCB-03 before changing labels."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-03",
+      "title": "Source Search Matrix",
+      "category": "evidence",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "noah",
+      "grid": {
+        "x": 7,
+        "y": 1,
+        "w": 4,
+        "h": 2
+      },
+      "summary": "Collect candidate sources and maintain a lightweight literature matrix with mechanism tags and relevance notes.",
+      "touches": [
+        "literature/source_matrix.md",
+        "literature/search_notes.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-01 scope definition",
+          "OCB-02 taxonomy labels"
+        ],
+        "outputs": [
+          "Lightweight source matrix with citations, mechanism tags, and evidence notes",
+          "Search notes naming inclusion and exclusion choices"
+        ],
+        "boundaryNotes": [
+          "Every draft claim that cites literature should trace to this matrix.",
+          "Matrix tags should stay synchronized with the taxonomy task."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-04",
+      "title": "Evidence Traceability Notes",
+      "category": "evidence",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "noah",
+      "grid": {
+        "x": 11,
+        "y": 1,
+        "w": 3,
+        "h": 2
+      },
+      "summary": "Turn the source matrix into claim-level evidence notes that writers can cite without guessing.",
+      "touches": [
+        "literature/source_matrix.md",
+        "literature/claim_evidence_notes.md",
+        "draft/using-ai-to-proxy-communication.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-03 source matrix",
+          "Draft claim needs from OCB-05 and OCB-06"
+        ],
+        "outputs": [
+          "Claim-to-source traceability notes",
+          "Evidence gaps that should not be overclaimed in the draft"
+        ],
+        "boundaryNotes": [
+          "Draft writers should cite only claims backed by this traceability layer.",
+          "Unresolved evidence gaps should be visible before final integration."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-05",
+      "title": "Background Synthesis Draft",
+      "category": "drafting",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "lin",
+      "grid": {
+        "x": 1,
+        "y": 4,
+        "w": 4,
+        "h": 2
+      },
+      "summary": "Draft the opening synthesis that situates AI proxy communication within AI-mediated collaboration.",
+      "touches": [
+        "draft/using-ai-to-proxy-communication.md",
+        "literature/claim_evidence_notes.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-01 definition",
+          "OCB-02 taxonomy",
+          "OCB-04 evidence traceability notes",
+          "OCB-07 section outline"
+        ],
+        "outputs": [
+          "Background and synthesis paragraphs for the subsection",
+          "Draft claims linked back to source evidence"
+        ],
+        "boundaryNotes": [
+          "Use the outline's paragraph boundaries to avoid overlapping with the risk discussion.",
+          "Do not finalize claims that are missing source-matrix support."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-06",
+      "title": "Breakdowns And Risks Draft",
+      "category": "drafting",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "lin",
+      "grid": {
+        "x": 5,
+        "y": 4,
+        "w": 4,
+        "h": 2
+      },
+      "summary": "Draft the discussion of communication breakdowns, filtering risks, misrepresentation, and coordination hazards.",
+      "touches": [
+        "draft/using-ai-to-proxy-communication.md",
+        "literature/claim_evidence_notes.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-01 definition",
+          "OCB-02 taxonomy",
+          "OCB-04 evidence traceability notes",
+          "OCB-07 section outline"
+        ],
+        "outputs": [
+          "Risk and breakdown paragraphs for the subsection",
+          "List of claims that need careful qualification in final integration"
+        ],
+        "boundaryNotes": [
+          "Risk claims must stay tied to evidence notes and should not contradict the definition.",
+          "Coordinate draft surface boundaries with OCB-05 because both tasks touch the same subsection file."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-07",
+      "title": "Section Outline And Writing Boundaries",
+      "category": "integration",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "priya",
+      "grid": {
+        "x": 9,
+        "y": 4,
+        "w": 4,
+        "h": 2
+      },
+      "summary": "Create the subsection outline and make writing boundaries visible so multiple writers do not overwrite the same draft surface.",
+      "touches": [
+        "outline/section_outline.md",
+        "draft/using-ai-to-proxy-communication.md",
+        "opencollab/Task_Status.json"
+      ],
+      "interfaces": {
+        "inputs": [
+          "TASK_BRIEF.md deliverable requirements",
+          "OCB-01 definition",
+          "OCB-02 taxonomy",
+          "Known writer responsibilities"
+        ],
+        "outputs": [
+          "Section outline with paragraph sequence",
+          "Writing boundary map for draft surfaces and handoffs"
+        ],
+        "boundaryNotes": [
+          "Outline should specify which paragraph surfaces Lin owns before drafting proceeds.",
+          "Boundary changes should be reflected in OpenCollab before final merge."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "OCB-08",
+      "title": "Integration Pass And Final Merge",
+      "category": "integration",
+      "state": "claimed",
+      "progress": 0,
+      "claimantId": "priya",
+      "grid": {
+        "x": 4,
+        "y": 7,
+        "w": 5,
+        "h": 2
+      },
+      "summary": "Merge the subsection and align definitions, taxonomy labels, evidence links, and final claims.",
+      "touches": [
+        "draft/using-ai-to-proxy-communication.md",
+        "literature/source_matrix.md",
+        "literature/claim_evidence_notes.md",
+        "outline/section_outline.md"
+      ],
+      "interfaces": {
+        "inputs": [
+          "OCB-01 stable definition",
+          "OCB-02 taxonomy",
+          "OCB-04 evidence traceability notes",
+          "OCB-05 background synthesis draft",
+          "OCB-06 risks draft",
+          "OCB-07 outline and boundary map"
+        ],
+        "outputs": [
+          "Concise final literature review subsection",
+          "Final check that claims trace to the source matrix",
+          "Clean handoff state for the broader paper"
+        ],
+        "boundaryNotes": [
+          "Final merge should not proceed until definition, taxonomy, evidence, and draft surfaces have been reviewed.",
+          "Any unsupported claim should be revised or marked as needing more evidence before completion."
+        ]
+      },
+      "updatedAt": "2026-07-01T03:08:56.730Z"
+    }
+  ],
+  "links": [
+    {
+      "id": "ln-01",
+      "source": "OCB-01",
+      "target": "OCB-02",
+      "kind": "dependency",
+      "info": "The taxonomy depends on a stable definition of AI proxy communication so its categories do not drift into ordinary writing assistance.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-02",
+      "source": "OCB-02",
+      "target": "OCB-03",
+      "kind": "boundary",
+      "info": "The source matrix should reuse the taxonomy labels; if search evidence changes those labels, Mira and Noah should coordinate the vocabulary.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-03",
+      "source": "OCB-03",
+      "target": "OCB-04",
+      "kind": "dependency",
+      "info": "Claim-level evidence notes depend on the source matrix being populated with citations, mechanism tags, and relevance notes.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-04",
+      "source": "OCB-04",
+      "target": "OCB-05",
+      "kind": "dependency",
+      "info": "The background synthesis should only make literature claims that can be traced to Noah's evidence notes.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-05",
+      "source": "OCB-04",
+      "target": "OCB-06",
+      "kind": "dependency",
+      "info": "The risks discussion should use the evidence notes to avoid unsupported claims about breakdowns or misrepresentation.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-06",
+      "source": "OCB-07",
+      "target": "OCB-05",
+      "kind": "dependency",
+      "info": "The background draft should follow Priya's outline and writing boundary map before Lin writes into the shared subsection file.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-07",
+      "source": "OCB-07",
+      "target": "OCB-06",
+      "kind": "dependency",
+      "info": "The risks draft should follow the same outline and boundary map to prevent overlap with the background synthesis.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-08",
+      "source": "OCB-01",
+      "target": "OCB-05",
+      "kind": "boundary",
+      "info": "The background synthesis and definition task share the central concept; draft wording should preserve Mira's scope boundary.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-09",
+      "source": "OCB-01",
+      "target": "OCB-06",
+      "kind": "dependency",
+      "info": "The risks discussion needs the definition to distinguish proxy communication risks from general AI writing-assistance risks.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-10",
+      "source": "OCB-02",
+      "target": "OCB-05",
+      "kind": "boundary",
+      "info": "The synthesis should use the taxonomy labels consistently when describing communication proxy mechanisms.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-11",
+      "source": "OCB-05",
+      "target": "OCB-06",
+      "kind": "boundary",
+      "info": "Both drafting tasks touch the same subsection file and adjacent claims; Lin should keep paragraph boundaries clear before merging.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-12",
+      "source": "OCB-01",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge depends on a stable definition and proxy boundary.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-13",
+      "source": "OCB-02",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge depends on stable taxonomy labels and mechanism descriptions.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-14",
+      "source": "OCB-04",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge depends on claim-to-source traceability for citations and evidence notes.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-15",
+      "source": "OCB-05",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge needs the background synthesis draft before it can align the complete subsection.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-16",
+      "source": "OCB-06",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge needs the risks and breakdowns draft before it can align final claims.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    },
+    {
+      "id": "ln-17",
+      "source": "OCB-07",
+      "target": "OCB-08",
+      "kind": "dependency",
+      "info": "The final merge should follow the outline and writing boundary map so the subsection remains coherent.",
+      "createdBy": "agent",
+      "createdAt": "2026-07-01T03:08:56.730Z"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "tl-20260701-mira-ocb01-scope-definition",
+      "type": "update",
+      "actorId": "mira",
+      "taskIds": [
+        "OCB-01"
+      ],
+      "title": "Mira drafted Scope Definition brief",
+      "details": "Set OCB-01 to 70% complete. Added a working definition of AI proxy communication, an explicit boundary with ordinary individual writing assistance, in-scope and out-of-scope examples, edge cases, an operational test, and handoff notes for Noah, Lin, and Priya. Mira noted that more work remains before final completion.",
+      "createdAt": "2026-07-01T03:20:01.608Z",
+      "adds": [
+        "tasks[OCB-01].draftBrief",
+        "tasks[OCB-01].progress",
+        "tasks[OCB-01].interfaces.outputs"
+      ]
+    }
+  ],
+  "meetings": [],
+  "conflicts": [],
+  "view": {
+    "board": {
+      "cols": 14,
+      "rows": 10
+    },
+    "taskIdPrefix": "OCB",
+    "progressSteps": 24
+  }
+}

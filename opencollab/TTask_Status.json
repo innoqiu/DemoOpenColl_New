@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "T-0.3.0",
+  "kind": "OpenCollab Tiny Task Brief",
+  "project": {
+    "name": "DemoOpenColl_New",
+    "repo": "innoqiu/DemoOpenColl_New",
+    "statusTarget": "opencollab/Task_Status.json",
+    "cloudDocument": "https://github.com/innoqiu/DemoOpenColl_New.git",
+    "output": "Literature review subsection titled Using AI to Proxy Communication.",
+    "audience": "Readers of a broader paper on AI-mediated collaboration",
+    "collaborationMode": "OpenCollab parent repo stays local; this task repo stores the brief and JSON coordination dataset."
+  },
+  "brief": {
+    "assignment": "Write a concise literature review subsection explaining how AI systems stand in for, filter, summarize, translate, rephrase, or coordinate communication between people, while distinguishing proxy communication from ordinary individual writing assistance.",
+    "finalDeliverables": [
+      "Definition of AI proxy communication",
+      "Small taxonomy of proxy mechanisms",
+      "Discussion of communication breakdowns and risks",
+      "Citations or evidence notes linked to a lightweight literature matrix",
+      "Final integration pass aligning definitions, evidence, and claims"
+    ],
+    "constraints": [
+      "Claims in the draft must trace back to the source matrix.",
+      "Definitions must stay consistent across notes and draft text.",
+      "Writing boundaries should be visible because multiple writers may touch the same draft surface.",
+      "The cloud repo should remain lightweight and maintain only the brief plus OpenCollab JSON dataset."
+    ]
+  },
+  "members": [
+    { "id": "mira", "displayName": "Mira", "focus": "scope, definitions, and taxonomy" },
+    { "id": "noah", "displayName": "Noah", "focus": "source search and evidence matrix" },
+    { "id": "lin", "displayName": "Lin", "focus": "synthesis and draft background" },
+    { "id": "priya", "displayName": "Priya", "focus": "section outline, integration, and final merge" }
+  ],
+  "workPackages": [
+    {
+      "id": "OCB-01",
+      "title": "Scope Definition",
+      "owner": "mira",
+      "state": "active",
+      "progress": 70,
+      "brief": "Working definition, boundary with individual writing assistance, scope tests, and handoff notes drafted for team review."
+    },
+    { "id": "OCB-02", "title": "Proxy Mechanism Taxonomy", "owner": "mira" },
+    { "id": "OCB-03", "title": "Source Search Matrix", "owner": "noah" },
+    { "id": "OCB-04", "title": "Evidence Traceability Notes", "owner": "noah" },
+    { "id": "OCB-05", "title": "Background Synthesis Draft", "owner": "lin" },
+    { "id": "OCB-06", "title": "Breakdowns And Risks Draft", "owner": "lin" },
+    { "id": "OCB-07", "title": "Section Outline And Writing Boundaries", "owner": "priya" },
+    { "id": "OCB-08", "title": "Integration Pass And Final Merge", "owner": "priya" }
+  ],
+  "classificationHints": [
+    "Use dependency edges when one artifact must exist before another can be accurate.",
+    "Use boundary edges when two owners touch the same concept, claim, file, or interface.",
+    "Use sync edges when active tasks need a short alignment meeting."
+  ],
+  "createdAt": "2026-07-01T03:08:03.647Z",
+  "updatedAt": "2026-07-01T03:08:56.730Z"
+}
