@@ -7,7 +7,7 @@
     "locked": true,
     "statusFile": "opencollab/Task_Status.json",
     "currentActorId": "noah",
-    "updatedAt": "2026-07-01T04:15:25.820Z"
+    "updatedAt": "2026-07-01T11:16:47.462Z"
   },
   "commands": {
     "def": "/ocb def --actor <id> --signature <text> --color <hex>",
@@ -195,7 +195,7 @@
       "category": "framing",
       "state": "claimed",
       "progress": 0,
-      "claimantId": "mira",
+      "claimantId": "noah",
       "grid": {
         "x": 4,
         "y": 1,
@@ -222,7 +222,7 @@
           "If source evidence suggests a new category, coordinate with OCB-03 before changing labels."
         ]
       },
-      "updatedAt": "2026-07-01T03:08:56.730Z"
+      "updatedAt": "2026-07-01T11:16:39.079Z"
     },
     {
       "id": "OCB-03",
@@ -601,6 +601,25 @@
   ],
   "timeline": [
     {
+      "id": "tl-1782904607461-3c83",
+      "type": "update",
+      "actorId": "noah",
+      "taskIds": [
+        "OCB-01",
+        "OCB-03",
+        "OCB-04",
+        "OCB-07"
+      ],
+      "title": "Agent push review",
+      "details": "Reviewed 4 active task interfaces before push. Highlighted OCB-01, OCB-03, OCB-04, OCB-07. 1 boundary/conflict item(s) still need attention.",
+      "createdAt": "2026-07-01T11:16:47.461Z",
+      "adds": [
+        "tasks[] review",
+        "conflicts[] review",
+        "timeline[]"
+      ]
+    },
+    {
       "id": "tl-1782879325819-0984",
       "type": "update",
       "actorId": "noah",
@@ -689,7 +708,7 @@
       ],
       "title": "Shared file boundary",
       "message": "draft/using-ai-to-proxy-communication.md is touched by OCB-01, OCB-04, OCB-07. Confirm ownership before push.",
-      "detectedAt": "2026-07-01T04:15:25.820Z",
+      "detectedAt": "2026-07-01T11:16:47.462Z",
       "resolved": false
     }
   ],
