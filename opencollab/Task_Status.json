@@ -7,7 +7,7 @@
     "locked": true,
     "statusFile": "opencollab/Task_Status.json",
     "currentActorId": "noah",
-    "updatedAt": "2026-07-01T04:08:02.722Z"
+    "updatedAt": "2026-07-01T04:10:58.886Z"
   },
   "commands": {
     "def": "/ocb def --actor <id> --signature <text> --color <hex>",
@@ -262,9 +262,9 @@
       "id": "OCB-04",
       "title": "Evidence Traceability Notes",
       "category": "evidence",
-      "state": "undo",
-      "progress": 0,
-      "claimantId": null,
+      "state": "active",
+      "progress": 60,
+      "claimantId": "noah",
       "grid": {
         "x": 11,
         "y": 1,
@@ -291,7 +291,7 @@
           "Unresolved evidence gaps should be visible before final integration."
         ]
       },
-      "updatedAt": "2026-07-01T04:07:49.611Z"
+      "updatedAt": "2026-07-01T04:10:27.405Z"
     },
     {
       "id": "OCB-05",
@@ -369,9 +369,9 @@
       "id": "OCB-07",
       "title": "Section Outline And Writing Boundaries",
       "category": "integration",
-      "state": "claimed",
-      "progress": 0,
-      "claimantId": "priya",
+      "state": "active",
+      "progress": 15,
+      "claimantId": "noah",
       "grid": {
         "x": 9,
         "y": 4,
@@ -400,7 +400,7 @@
           "Boundary changes should be reflected in OpenCollab before final merge."
         ]
       },
-      "updatedAt": "2026-07-01T03:08:56.730Z"
+      "updatedAt": "2026-07-01T04:10:52.507Z"
     },
     {
       "id": "OCB-08",
@@ -601,6 +601,25 @@
   ],
   "timeline": [
     {
+      "id": "tl-1782879058885-1a0e",
+      "type": "update",
+      "actorId": "noah",
+      "taskIds": [
+        "OCB-01",
+        "OCB-03",
+        "OCB-04",
+        "OCB-07"
+      ],
+      "title": "Agent push review",
+      "details": "Reviewed 4 active task interfaces before push. Highlighted OCB-01, OCB-03, OCB-04, OCB-07. 1 boundary/conflict item(s) still need attention.",
+      "createdAt": "2026-07-01T04:10:58.885Z",
+      "adds": [
+        "tasks[] review",
+        "conflicts[] review",
+        "timeline[]"
+      ]
+    },
+    {
       "id": "tl-1782878882721-a066",
       "type": "update",
       "actorId": "noah",
@@ -635,7 +654,26 @@
     }
   ],
   "meetings": [],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "id": "shared-draft-using-ai-to-proxy-communication-md",
+      "type": "shared-file",
+      "severity": "medium",
+      "taskIds": [
+        "OCB-01",
+        "OCB-04",
+        "OCB-07"
+      ],
+      "memberIds": [
+        "mira",
+        "noah"
+      ],
+      "title": "Shared file boundary",
+      "message": "draft/using-ai-to-proxy-communication.md is touched by OCB-01, OCB-04, OCB-07. Confirm ownership before push.",
+      "detectedAt": "2026-07-01T04:10:58.886Z",
+      "resolved": false
+    }
+  ],
   "view": {
     "board": {
       "cols": 14,
